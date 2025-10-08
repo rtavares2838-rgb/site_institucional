@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projeto CNW - Página Inicial</title>
+    <meta name="description" content="Página inicial do projeto CNW. Exemplo básico de estrutura HTML." />
+    <style>
+        :root{--bg:#f7f9fc;--card:#fff;--accent:#0b63ff;--muted:#6b7280;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+        *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#111;font-family:var(--font-family, Inter);line-height:1.5}
+        header{background:linear-gradient(90deg,#fff 0,#f5fbff 100%);border-bottom:1px solid #e6eef8}
+        .container{max-width:980px;margin:0 auto;padding:20px}
+        .brand{display:flex;align-items:center;gap:12px;font-weight:600}
+        .brand .logo{width:42px;height:42px;border-radius:8px;background:var(--accent);display:inline-block}
+        nav{margin-top:8px}
+        nav a{color:var(--accent);text-decoration:none;margin-right:12px;font-weight:500}
+        main{padding:36px 20px}
+        .hero{display:flex;flex-direction:column;gap:18px;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 6px 18px rgba(11,99,255,0.06)}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+        .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef2ff}
+        footer{padding:18px 20px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #eef2ff;background:transparent}
+        @media(min-width:700px){.hero{flex-direction:row;align-items:center;justify-content:space-between}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <span class="logo" aria-hidden="true"></span>
+                <div>
+                    <div>Projeto CNW</div>
+                    <div style="font-size:13px;color:var(--muted)">Página inicial</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div>
+                <h1 id="titulo-principal" style="margin:0 0 6px">Boas-vindas ao Projeto CNW</h1>
+                <p style="margin:0;color:var(--muted)">Página inicial básica criada para começar o desenvolvimento. Edite este arquivo em /c:/xampp/htdocs/projeto_cnw/index.html</p>
+            </div>
+            <div style="min-width:220px;text-align:right">
+                <a href="#contato" style="display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none">Entre em contato</a>
+            </div>
+        </section>
+
+        <div class="grid" style="margin-top:20px">
+            <article class="card" id="sobre">
+                <h3 style="margin-top:0">Sobre</h3>
+                <p style="margin:6px 0;color:var(--muted)">Breve descrição do projeto, objetivos e tecnologias a serem usadas.</p>
+            </article>
+
+            <article class="card" id="servicos">
+                <h3 style="margin-top:0">Serviços</h3>
+                <p style="margin:6px 0;color:var(--muted)">Lista de funcionalidades ou módulos planejados para o projeto.</p>
+            </article>
+
+            <article class="card" id="contato">
+                <h3 style="margin-top:0">Contato</h3>
+                <p style="margin:6px 0;color:var(--muted)">email@exemplo.com</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        © <span id="ano"></span> Projeto CNW — Criado com HTML simples
+        <script>
+            // Atualiza o ano automaticamente
+            document.getElementById('ano').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
